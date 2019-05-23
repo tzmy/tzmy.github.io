@@ -1,9 +1,9 @@
 <html>
   <head>
-  <meta charset="utf-8" />
+    <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Gridea</title>
+<title>dom动态生成元素 | Gridea</title>
 <link rel="shortcut icon" href="https://blog.tztzmy.xyz/favicon.ico?v=1558590629685">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://blog.tztzmy.xyz/styles/main.css">
@@ -68,13 +68,44 @@
   </div>
 </div>
 
+      
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              dom动态生成元素
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-05-23 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <pre><code class="language-js">var element = document.createElement('embed');
+    element.setAttribute('id','plugin');
+    element.setAttribute('type','application/x-ppapi-example-media-stream-video');
+    element.setAttribute('width','640');
+    element.setAttribute('height','240');
+    document.body.appendChild(element);</code></pre>
 
-        <div class="tags-container">
-          
-            <a class="tag" href="https://blog.tztzmy.xyz/tag/gridea">Gridea</a>
-          
+            </div>
+          </article>
         </div>
+    
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://blog.tztzmy.xyz/post/test">
+              <h3 class="post-title">
+                Test
+              </h3>
+            </a>
+          </div>  
+        
 
+        
+    
         <div class="site-footer">
   Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
 </div>
