@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://blog.tztzmy.xyz/favicon.ico?v=1563520101290">
+<link rel="shortcut icon" href="https://blog.tztzmy.xyz/favicon.ico?v=1563520605213">
 <link rel="stylesheet" href="https://blog.tztzmy.xyz/styles/main.css">
 
 
@@ -35,7 +35,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://blog.tztzmy.xyz">
-        <img src="https://blog.tztzmy.xyz/images/avatar.png?v=1563520101290" class="site-logo">
+        <img src="https://blog.tztzmy.xyz/images/avatar.png?v=1563520605213" class="site-logo">
         <h1 class="site-title">Gridea</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -109,7 +109,53 @@ text-overflow: ellipsis;
 <p>然而千万不能写漏掉了。
 在普通的样式中，长度不够时我们很容易发现错误的实现，然而较复杂的就需要我们仔细检查。example:</p>
 <p><img src="https://blog.tztzmy.xyz/post-images/1563520084931.png" alt="">
-实现这个的时候</p>
+实现这个的时候
+我们前面的属性需要用到...的效果，这时候左边长度不固定，测试的时候有时候不一定会想到就是缺少属性引起的BUG，这题我用到的具体如下：
+<a href="https://codepen.io/tzmy/pen/Vowjay">demo</a></p>
+<pre><code class="language-css">.box{
+		overflow: hidden;
+		height: 32px;
+}
+.title{
+		font-size: 26px;
+		height: 32px;
+		line-height: 32px;
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		vertical-align: middle;
+		text-align: left;
+}
+.tag-box{
+		float: right;
+		height: 32px;
+		line-height: 32px;
+		vertical-align: middle;
+		background: inherit;
+}
+
+.tag{
+		display: inline-block;
+		border: 1px solid #2c94e9;
+		color: #2c94e9;
+		height: 32px;
+		line-height: 32px;
+		border-radius: 5px;
+		box-sizing: border-box;
+		font-size: 16px;
+		padding: 0 2px;
+}
+</code></pre>
+<pre><code class="language-html">&lt;div class = 'box'&gt;
+		&lt;div class=&quot;tag-box&quot;&gt;
+				&lt;div class='tag'&gt;连载&lt;/div&gt;
+				&lt;div class='tag'&gt;连载&lt;/div&gt;
+				&lt;div class='tag'&gt;连载&lt;/div&gt;
+				&lt;div class='tag'&gt;连载&lt;/div&gt;
+		&lt;/div&gt;
+		&lt;div class=&quot;title&quot;&gt;这次是一个新的故事这次是一个新的故事这次是一个新的故事&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 
             </div>
             
