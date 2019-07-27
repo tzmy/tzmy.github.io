@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>dom动态生成元素 | Gridea</title>
+<title>修改react项目 | Gridea</title>
 <meta name="description" content="温故而知新">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -97,27 +97,27 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">dom动态生成元素</h2>
-            <div class="post-date">2019-05-23</div>
+            <h2 class="post-title">修改react项目</h2>
+            <div class="post-date">2019-07-27</div>
             
             <div class="post-content">
-              <h2 id="一般的方法如下">一般的方法如下</h2>
-<pre><code class="language-js">var element = document.createElement('embed');
-    element.setAttribute('id','plugin');
-    element.setAttribute('type','application/x-ppapi-example-media-stream-video');
-    element.setAttribute('width','640');
-    element.setAttribute('height','240');
-    document.body.appendChild(element);
-</code></pre>
+              <h3 id="总体">总体</h3>
+<p>先说总结，修改过程不是很顺利，原因大部分是基础的api没有学习到位，各种方法用的不是很熟练；</p>
+<h3 id="思维差异">思维差异</h3>
+<p>react组件化的思想，让我不是很理解，可能在公司项目面向过程写多了，总是get不到一种好的实现方法；大部分还是通过比较生硬的逻辑实现，没有体现语言的优势；</p>
+<h3 id="异步操作">异步操作</h3>
+<p>碰到一些异步的操作要小心，一些setState的操作可以合并到一起；</p>
+<h3 id="唯一-key">唯一 key</h3>
+<p>列表中子项要加上唯一key,提高性能;</p>
 
             </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://blog.tztzmy.xyz/post/test">
+                <a href="https://blog.tztzmy.xyz/post/xie-de-jiao-xun-css">
                   <h3 class="post-title">
-                    Test
+                    血的教训，震惊，不能漏掉css属性
                   </h3>
                 </a>
               </div>
